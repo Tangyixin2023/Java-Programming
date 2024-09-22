@@ -1,6 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        double result=(9.5*4.5-2.5*3)/(45.5-3.5);
-        System.out.println(result);
+        double result=312032486;
+        double birth=365*24*3600/7.0;
+        double death=365*24*3600/13.0;
+        double immigrant=365*24*3600/45.0;
+        for(int i=0;i<5;i++) {
+            result = result + birth - death + immigrant;
+            System.out.println("the population of "+i+" year is :"+result);
+        }
+        System.out.println("the result is: "+result);
     }
 }
