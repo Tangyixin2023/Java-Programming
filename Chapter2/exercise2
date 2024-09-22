@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double subtotal =sc.nextDouble();
+        double gratuityrate =sc.nextDouble();
+        double gratuity = subtotal * gratuityrate / 100;
+        double total = subtotal + gratuity;
+        System.out.println("The gratuity is "+gratuity+" and the total is "+total);
+    }
+}
