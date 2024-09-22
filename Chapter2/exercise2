@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the subtotal and a gratuity rate:");
         double subtotal =sc.nextDouble();
         double gratuityrate =sc.nextDouble();
         double gratuity = subtotal * gratuityrate / 100;
