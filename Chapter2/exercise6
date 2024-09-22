@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the monthly saving amount:");
+        double money = sc.nextDouble();
+        double value = money * (1 + 0.00417);
+        for (int i=1;i<6;i++){
+            value = (money + value) * (1 + 0.00417);
+        }
+        System.out.println("After the six month,the account value is $" + value);
+    }
+}
