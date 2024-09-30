@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class lab2t8 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length of the side:");
+        double length = sc.nextDouble();
+        double area = length * length * 3 * Math.pow(3,0.5) / 2;
+        System.out.println("The area is " + area);
+
+    }
+}
