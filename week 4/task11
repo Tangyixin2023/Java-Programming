@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class lab2t11 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter purchase amount: ");
+        double amount = input.nextDouble();
+        double tax = amount * 0.06;
+        System.out.printf("Sales tax is &$");
+        System.out.format("%.2f",tax);
+    }
+}
