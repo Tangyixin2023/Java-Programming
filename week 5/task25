@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class t25 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the first city: ");
+        String c1 = input.nextLine();
+        System.out.print("Enter the second city: ");
+        String c2 = input.nextLine();
+        System.out.print("Enter the third city: ");
+        String c3 = input.nextLine();
+
+        if (c1.compareTo(c2) < 0 && c1.compareTo(c3) < 0) {
+            if (c2.compareTo(c3) < 0) {
+                System.out.println("The three cities in alphabetical order are "
+                        + c1 + " " + c2 + " " + c3);
+            }
+            else {
+                System.out.println("The three cities in alphabetical order are "
+                        + c1 + " " + c3 + " " + c2);
+            }
+        }
+        else if (c2.compareTo(c1) < 0 && c2.compareTo(c3) < 0) {
+            if (c1.compareTo(c3) < 0) {
+                System.out.println("The three cities in alphabetical order are "
+                        + c2 + " " + c1 + " " + c3);
+            }
+            else {
+                System.out.println("The three cities in alphabetical order are "
+                        + c2 + " " + c3 + " " + c1);
+            }
+        }
+        else if (c3.compareTo(c1) < 0 && c3.compareTo(c2) < 0) {
+            if (c1.compareTo(c2) < 0) {
+                System.out.println("The three cities in alphabetical order are "
+                        + c3 + " " + c1 + " " + c2);
+            }
+            else {
+                System.out.println("The three cities in alphabetical order are "
+                        + c3 + " " + c2 + " " + c1);
+            }
+        }
+    }
+}
