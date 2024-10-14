@@ -1,0 +1,11 @@
+public class eg14 {
+    public static void main(String[] args) {
+        int i=0;
+        double tuition=10000.0;
+        for (i=0;tuition<20000.0;i++){
+            tuition*=1.07;
+        }
+        System.out.println("Tuition will be doubled in "+i+" years");
+        System.out.printf("Tuition will be $%.2f in %d years",tuition,i);
+    }
+}
