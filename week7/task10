@@ -1,0 +1,21 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week7task10 {
+    public week7task10() {
+    }
+
+    public static char getRandomCharacter(char ch1, char ch2) {
+        return (char)((int)((double)ch1 + Math.random() * (double)(ch2 - ch1 + 1)));
+    }
+
+    public static char getRandomLowerCaseLetter() {
+        return getRandomCharacter('a', 'z');
+    }
+
+    public static char getRandomUpperCaseLetter() {
+        return getRandomCharacter('A', 'Z');
+    }
+}
