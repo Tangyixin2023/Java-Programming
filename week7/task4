@@ -1,0 +1,26 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week7task4 {
+    public week7task4() {
+    }
+
+    public static void main(String[] args) {
+        System.out.print("The grade is " + getGrade(78.5D));
+        System.out.print("\nThe grade is " + getGrade(59.5D));
+    }
+
+    public static char getGrade(double score) {
+        if (score >= 90.0D) {
+            return 'A';
+        } else if (score >= 80.0D) {
+            return 'B';
+        } else if (score >= 70.0D) {
+            return 'C';
+        } else {
+            return (char)(score >= 60.0D ? 'D' : 'F');
+        }
+    }
+}
