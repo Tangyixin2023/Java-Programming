@@ -1,0 +1,42 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.Scanner;
+
+public class week7task13 {
+    public week7task13() {
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a hexadecimal number: ");
+        String hexNumber = scanner.nextLine();
+        int decimalNumber = convertHexToDecimal(hexNumber.toUpperCase());
+        System.out.println("The decimal value of hex number " + hexNumber + " is: " + decimalNumber);
+        scanner.close();
+    }
+
+    public static int convertHexToDecimal(String hex) {
+        int decimal = 0;
+
+        for(int i = 0; i < hex.length(); ++i) {
+            char hexChar = hex.charAt(i);
+            int hexValue = hexCharToDecimal(hexChar);
+            decimal = decimal * 16 + hexValue;
+        }
+
+        return decimal;
+    }
+
+    private static int hexCharToDecimal(char hexChar) {
+        if (hexChar >= '0' && hexChar <= '9') {
+            return hexChar - 48;
+        } else if (hexChar >= 'A' && hexChar <= 'F') {
+            return 10 + (hexChar - 65);
+        } else {
+            throw new IllegalArgumentException("Invalid hexadecimal character: " + hexChar);
+        }
+    }
+}
