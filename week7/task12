@@ -1,0 +1,79 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.io.PrintStream;
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class week7task12 {
+    public week7task12() {
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the year: ");
+        int year = scanner.nextInt();
+        System.out.print("Enter the month (1-12): ");
+        int month = scanner.nextInt();
+        printCalendar(month, year);
+    }
+
+    private static void printCalendar(int month, int year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month - 1, 1);
+        PrintStream var10000 = System.out;
+        String var10001 = getMonthName(month);
+        var10000.println("\n    " + var10001 + " " + year);
+        System.out.println("Su Mo Tu We Th Fr Sa");
+        System.out.println("--------------------");
+        int firstDayOfWeek = calendar.get(7) - 1;
+
+        int daysInMonth;
+        for(daysInMonth = 0; daysInMonth < firstDayOfWeek; ++daysInMonth) {
+            System.out.print("   ");
+        }
+
+        daysInMonth = getDaysInMonth(month, year);
+
+        for(int day = 1; day <= daysInMonth; ++day) {
+            System.out.printf("%2d ", day);
+            if ((firstDayOfWeek + day) % 7 == 0 || day == daysInMonth) {
+                System.out.println();
+            }
+        }
+
+    }
+
+    public static String getMonthName(int month) {
+        String[] months = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        return months[month - 1];
+    }
+
+    public static int getDaysInMonth(int month, int year) {
+        switch(month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            return 31;
+        case 2:
+            return isLeapYear(year) ? 29 : 28;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            return 30;
+        default:
+            throw new IllegalArgumentException("Invalid month: " + month);
+        }
+    }
+
+    public static boolean isLeapYear(int year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
+}
