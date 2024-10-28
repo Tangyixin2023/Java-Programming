@@ -1,0 +1,39 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week8task9 {
+    public week8task9() {
+    }
+
+    public static void main(String[] args) {
+        int[] mylist = new int[5];
+
+        int temp;
+        for(temp = 0; temp < mylist.length; ++temp) {
+            mylist[temp] = (int)(Math.random() * (double)mylist.length);
+        }
+
+        System.out.println("Array before shifting: ");
+
+        for(temp = 0; temp < mylist.length; ++temp) {
+            System.out.print(mylist[temp] + " ");
+        }
+
+        temp = mylist[0];
+
+        int i;
+        for(i = 1; i < mylist.length; ++i) {
+            mylist[i - 1] = mylist[i];
+        }
+
+        mylist[mylist.length - 1] = temp;
+        System.out.println("\nArray after shifting: ");
+
+        for(i = 0; i < mylist.length; ++i) {
+            System.out.print(mylist[i] + " ");
+        }
+
+    }
+}
