@@ -1,0 +1,28 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week8task13 {
+    public week8task13() {
+    }
+
+    public static void main(String[] args) {
+        int[] sourceArray = new int[]{2, 3, 1, 5, 10};
+        int[] targetArray = new int[sourceArray.length];
+
+        for(int i = 0; i < sourceArray.length; ++i) {
+            targetArray[i] = sourceArray[i];
+        }
+
+        System.out.println("Target array is: ");
+        int[] var7 = targetArray;
+        int var4 = targetArray.length;
+
+        for(int var5 = 0; var5 < var4; ++var5) {
+            int value = var7[var5];
+            System.out.print(value + " ");
+        }
+
+    }
+}
