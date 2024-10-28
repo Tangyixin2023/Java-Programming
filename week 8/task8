@@ -1,0 +1,31 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week8task8 {
+    public week8task8() {
+    }
+
+    public static void main(String[] args) {
+        int[] mylist = new int[10];
+        System.out.println("Array before shuffling: ");
+
+        int i;
+        for(i = 0; i < mylist.length; ++i) {
+            mylist[i] = (int)(Math.random() * (double)mylist.length);
+            System.out.print(mylist[i] + " ");
+        }
+
+        System.out.println("\nArray after shuffling: ");
+
+        for(i = 0; i < mylist.length; ++i) {
+            int j = (int)(Math.random() * (double)mylist.length);
+            int temp = mylist[i];
+            mylist[i] = mylist[j];
+            mylist[j] = temp;
+            System.out.print(mylist[i] + " ");
+        }
+
+    }
+}
