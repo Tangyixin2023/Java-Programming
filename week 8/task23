@@ -1,0 +1,29 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.Scanner;
+
+public class week8task23 {
+    public week8task23() {
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Enter 10 numbers: ");
+        Scanner input = new Scanner(System.in);
+        int[] array = new int[10];
+
+        int i;
+        for(i = 0; i < 10; ++i) {
+            array[i] = input.nextInt();
+        }
+
+        System.out.print("After reverse the order: ");
+
+        for(i = 0; i < 10; ++i) {
+            System.out.println(array[array.length - i - 1] + " ");
+        }
+
+    }
+}
