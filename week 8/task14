@@ -1,0 +1,24 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week8task14 {
+    public week8task14() {
+    }
+
+    public static void main(String[] args) {
+        int[] sourceArray = new int[]{2, 3, 1, 5, 10};
+        int[] targetArray = new int[sourceArray.length];
+        System.arraycopy(sourceArray, 0, targetArray, 0, sourceArray.length);
+        System.out.println("Target array after copying: ");
+        int[] var3 = targetArray;
+        int var4 = targetArray.length;
+
+        for(int var5 = 0; var5 < var4; ++var5) {
+            int value = var3[var5];
+            System.out.print(value + " ");
+        }
+
+    }
+}
