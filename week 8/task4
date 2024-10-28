@@ -1,0 +1,23 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class week8task4 {
+    public week8task4() {
+    }
+
+    public static void main(String[] args) {
+        double[] mylist = new double[5];
+
+        int i;
+        for(i = 0; i < mylist.length; ++i) {
+            mylist[i] = Math.random() * 10.0D;
+        }
+
+        for(i = 1; i < mylist.length; ++i) {
+            System.out.print(mylist[i] + " ");
+        }
+
+    }
+}
